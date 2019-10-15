@@ -1,0 +1,1 @@
+/home/omnisky/PycharmProjects/VD_by_FCOS/VD_FCOS_v0.5/FCOS/configs/fcos_R_50_FPN_1x_DataAug_P2_stride4_lr5e-3_fixed800_outC128.yaml
