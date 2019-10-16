@@ -68,7 +68,7 @@ class SigmoidFocalLoss(nn.Module):
         loss = loss_func(logits, targets, self.gamma, self.alpha)
         
         # remove the loss of ignore class.  
-        loss = loss[(targets != 1)]
+        # loss = loss[(targets != 1)]
 
         return loss.sum()
 
