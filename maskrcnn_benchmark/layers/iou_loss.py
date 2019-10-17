@@ -81,7 +81,9 @@ class IOULoss(nn.Module):
             raise NotImplementedError
 
         if weight is not None and weight.sum() > 0:
-            return (losses * weight).sum() / weight.sum()
+            # return (losses * weight).sum() / weight.sum()
+            return (losses * weight).sum()
         else:
             assert losses.numel() != 0
-            return losses.mean()
+            # return losses.mean()
+            return losses.sum()
