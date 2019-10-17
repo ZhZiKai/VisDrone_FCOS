@@ -450,8 +450,8 @@ class FCOSLossComputation(object):
         labels_flatten = torch.cat(labels_flatten, dim=0)
         reg_targets_flatten = torch.cat(reg_targets_flatten, dim=0)
 
+        # remove the loss of ignore class. 
         # pos_inds = torch.nonzero(labels_flatten > 0).squeeze(1)
-        pos_inds = torch.nonzero(labels_flatten > 1).squeeze(1)
 
         # pdb.set_trace()
         # (Pdb) box_cls_flatten.shape
